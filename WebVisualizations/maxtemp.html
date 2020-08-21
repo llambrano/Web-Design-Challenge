@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="../WebVisualizations/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../WebVisualizations/css/style.css">
+  <link rel="stylesheet" href="../WebVisualizations/css/landing.css">
+  <title>Bootstrap Visualization Dashboard</title>
+</head>
+<body>
+  <!--NavBar -->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand order-1 mr-0" href="../index.html">Latitude - Home Page</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Plots
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="cloud.html">Cloudiness</a>
+            <a class="dropdown-item" href="humid.html">Humidity</a>
+            <a class="dropdown-item" href="maxtemp.html">Max Temp</a>
+            <a class="dropdown-item" href="windspeed.html">Windspeed</a>
+            <div class="dropdown-divider"></div>
+          </div>
+        </li>  
+        <li class="nav-item active">
+          <a class="nav-link" href="comparisons.html">Comparison <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="data.html">Data <span class="sr-only">(current)</span></a>  
+        </li>
+
+      </ul>
+      
+    </div>
+  </nav>
+  <!-- /NavBar -->
+
+  <!-- Our rows function in containers (grid created). -->
+  <div class="container-fluid">
+    <!-- Our columns function in rows. -->
+    <div class="row">
+      <!-- Columns have 12 areas of width to work with. -->
+      <!-- (7/12) of screen -->
+      <div class="col-sm-7" id="col-7">
+        <h1>Summary: Latitude vs. Max Temperature</h1>
+        <hr>        
+        <section>
+          <figure>
+            <img class="img-responsive" id="sumry-img" src="../Resources/assets/images/Fig1.png" width="300" height="300" alt="Temperature vs X.">
+            <p>As expected, the weather becomes significantly warmer as one approaches the equator (0 Deg. Latitude). More interestingly, however, is the fact that the southern hemisphere tends to be warmer this time of year than the northern hemisphere. This may be due to the tilt of the earth at the time of the year this data was gathered.</p>
+          </p>
+          </figure>
+        </section>
+      <!-- div - col 7 end -->  
+      </div>
+      
+      <!-- Visualizations -->
+      <div class="col-sm-4" id="viz-all">
+        <h2 align="center">Visualizations</h2>
+        <hr>
+        <!-- nested row 12 columns " -->
+        <div class="row">       
+          <div class="col-sm-6">
+            <section>
+              <figure>
+                <a href="maxtemp.html">
+                <img class="img-responsive" src="../Resources/assets/images/Fig1.png" alt="Temperature vs. Latitude"></a>
+              </figure>
+            </section>
+          <!-- nested 6 columns -->  
+          </div>
+          <div class="col-sm-6">
+            <section>
+              <figure>
+                <a href="cloud.html">
+                <img class="img-responsive" src="../Resources/assets/images/Fig2.png" alt="cloudiness vs. Latitude"></a>
+              </figure>
+            </section>
+          <!-- nested 6 columns -->  
+          </div>
+        <!-- nested row 12 columns -->
+        </div>    
+        
+        <!-- nested row 12 columns -->
+        <div class="row">
+          <div class="col-sm-6">
+            <section>
+              <figure>
+                <a href="humid.html">
+                <img class="img-responsive" src="../Resources/assets/images/Fig3.png" alt="Humidity vs. Latitude"></a>
+              </figure>
+            </section>
+          <!-- nested 6 columns -->  
+          </div>
+
+          <div class="col-sm-6">     
+            <section>
+              <figure>
+                <a href="wind_speed.html">
+                <img class="img-responsive" src="../Resources/assets/images/Fig4.png" alt="Wind Speed vs. Latitude"></a>
+              </figure>
+            </section>
+          <!-- nested 6 columns -->  
+          </div>
+        <!-- nested row 12 columns -->
+        </div>  
+      <!-- div - col 4 end -->  
+      </div>
+    <!-- div - row end -->
+    </div>
+  <!-- div container end -->
+  </div>
+
+    <!-- jquery file  -->
+    <script type="text/javascript" src="js/jquery-3.5.1.slim.min.js"></script>
+
+    <!-- pooper file-->
+    <script type="text/javascript" src="js/pooper.js"></script>
+    
+    <!-- bootstrap javascript file -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+</body>
+
+</html>	
