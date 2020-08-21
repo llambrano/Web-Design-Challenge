@@ -2,57 +2,137 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <link rel="stylesheet" href="Resources/WebVisualizations/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="WebVisualizations/css/bootstrap.min.css">
+  <link rel="stylesheet" href="WebVisualizations/css/style.css">
+  <link rel="stylesheet" href="WebVisualizations/css/landing.css">
   <title>Bootstrap Visualization Dashboard</title>
 </head>
 <body>
+  <!--NavBar -->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand order-1 mr-0" href="index.html">Latitude - Home Page</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <!-- <style>
-    img {
-      width: 100%;
-      height: 200px;
-      max-height: 200px;
-    }
-  </style> -->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav mr-auto">
 
-  <div id="services">
-      <section>
-        <img src="Resources/assets/images/Fig1.png" alt="Latitud vs. Max Temperature">
-        <h4>Summary: Latitude vs. X</h4>
-        <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. 
-        To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
-      </section>
-      <section>
-        <img src="Resources/assets/images/Fig1.png" alt="Latitud vs. Max Temperature">
-        <h4>Summary: Latitude vs. X</h4>
-        <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. 
-        To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
-      </section>
-      <section>
-        <img src="Resources/assets/images/Fig2.png" alt="Latitud vs. Humidity">
-        <h4>Summary: Latitude vs. X</h4>
-        <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. 
-        To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
-      </section>
-      <section>
-        <img src="Resources/assets/images/Fig3.png" alt="Latitud vs. Cloudiness">
-        <h4>Summary: Latitude vs. X</h4>
-        <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. 
-        To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
-      </section>
-      <section>
-        <img src="Resources/assets/images/Fig4.png" alt="Latitud vs. Wind Speed">
-        <h4>Summary: Latitude vs. X</h4>
-        <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. 
-        To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
-      </section>
-</div><!-- container -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Plots
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="WebVisualizations/cloud.html">Cloudiness</a>
+            <a class="dropdown-item" href="WebVisualizations/humid.html">Humidity</a>
+            <a class="dropdown-item" href="WebVisualizations/maxtemp.html">Max Temp</a>
+            <a class="dropdown-item" href="WebVisualizations/windspeed.html">Windspeed</a>
+            <div class="dropdown-divider"></div>
+          </div>
+        </li>  
+        <li class="nav-item active">
+          <a class="nav-link" href="WebVisualizations/comparisons.html">Comparison <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="WebVisualizations/data.html">Data <span class="sr-only">(current)</span></a>  
+        </li>
 
-<script src="js/jquery.slim.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+      </ul>
+      
+    </div>
+  </nav>
+  <!-- /NavBar -->
+
+  <!-- container -->
+  <div class="container-fluid">
+    <!-- Our columns function in rows. -->
+    <div class="row">
+      <!-- Columns have 12 areas of width to work with. -->
+      <!-- (7/12) of screen -->
+      <div class="col-sm-7" id="col-7">
+        <h1>Summary: Latitude vs. X</h1>
+        <hr>        
+        <section>
+          <figure>
+            <img class="img-responsive" id="sumry-img" src="Resources/assets/images/equatorsign.png" width="300" height="300" alt="Temperature vs X.">
+            <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. 
+              To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
+              <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. 
+              Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and
+              visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+          </p>
+          </figure>
+        </section>
+      <!-- div - col 7 end -->  
+      </div>
+      
+      <!-- Visualizations -->
+      <div class="col-sm-4" id="viz-all">
+        <h2 align="center">Visualizations</h2>
+        <hr>
+        <!-- nested row 12 columns " -->
+        <div class="row">       
+          <div class="col-sm-6">
+            <section>
+              <figure>
+                <a href="WebVisualizations/maxtemp.html">
+                <img class="img-responsive" src="Resources/assets/images/Fig1.png" alt="Temperature vs. Latitude"></a>
+              </figure>
+            </section>
+          <!-- nested 6 columns -->  
+          </div>
+          <div class="col-sm-6">
+            <section>
+              <figure>
+                <a href="WebVisualizations/cloud.html">
+                <img class="img-responsive" src="Resources/assets/images/Fig2.png" alt="cloudiness vs. Latitude"></a>
+              </figure>
+            </section>
+          <!-- nested 6 columns -->  
+          </div>
+        <!-- nested row 12 columns -->
+        </div>    
+        
+        <!-- nested row 12 columns -->
+        <div class="row">
+          <div class="col-sm-6">
+            <section>
+              <figure>
+                <a href="WebVisualizations/humid.html">
+                <img class="img-responsive" src="Resources/assets/images/Fig3.png" alt="Humidity vs. Latitude"></a>
+              </figure>
+            </section>
+          <!-- nested 6 columns -->  
+          </div>
+
+          <div class="col-sm-6">     
+            <section>
+              <figure>
+                <a href="WebVisualizations/wind_speed.html">
+                <img class="img-responsive" src="Resources/assets/images/Fig4.png" alt="Wind Speed vs. Latitude"></a>
+              </figure>
+            </section>
+          <!-- nested 6 columns -->  
+          </div>
+        <!-- nested row 12 columns -->
+        </div>  
+      <!-- div - col 4 end -->  
+      </div>
+    <!-- div - row end -->
+    </div>
+  <!-- div container end -->
+  </div>
+
+  <!-- jquery file  -->
+  <script type="text/javascript" src="WebVisualizations/js/jquery-3.5.1.slim.min.js"></script>
+
+  <!-- pooper file-->
+  <script type="text/javascript" src="WebVisualizations/js/pooper.js"></script>
+  
+  <!-- bootstrap javascript file -->
+  <script type="text/javascript" src="WebVisualizations/js/bootstrap.js"></script>
+
 </body>
-</html>
+
+</html>	
